@@ -7,6 +7,7 @@ import {
   Skeleton,
   Text,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import React from "react";
@@ -56,6 +57,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({
     }
   };
   const cardTheme = useColorModeValue("white", "gray.700");
+  const [isTabletOrMobile] = useMediaQuery("(max-width: 40em)");
 
   return (
     <Flex position="relative" flex={1} overflow="hidden">
@@ -71,7 +73,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({
         <SlideArrow Icon={VscChevronLeft} onClick={handleClickPrev} left={0} />
       )}
 
-      <Flex flex={1} mx={8} overflow="hidden">
+      <Flex flex={1} mx={isTabletOrMobile ? 4 : 8} overflow="hidden">
         <CustomGrid
           autoFlow="column"
           templateRows="repeat(2, 1fr)"
@@ -97,6 +99,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({
                   bgPosition="center"
                   bgSize="cover"
                   flex={1}
+                  minH={250}
                 />
                 <Flex p={2} align="center" justify="space-between">
                   <Center>

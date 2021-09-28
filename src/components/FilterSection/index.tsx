@@ -54,7 +54,6 @@ const FilterSection: React.FC<FilterSectionProps> = ({
             return (
               <ListItem
                 cursor="pointer"
-                textAlign={isTabletOrMobile ? "center" : "left"}
                 borderLeft={isCurrent ? "4px solid" : "none"}
                 borderLeftColor="orange.300"
                 bg={isCurrent ? currentBg : "transparent"}

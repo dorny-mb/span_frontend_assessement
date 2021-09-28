@@ -28,7 +28,7 @@ const Home: React.FC = () => {
     "GET",
     params
   );
-  console.log(topicsData);
+
   loading.current = topicsState === "loading";
   error.current = topicsState === "network-error";
 
@@ -105,7 +105,6 @@ const Home: React.FC = () => {
           );
         } catch (e) {
           error.current = true;
-          console.log(e);
         }
         setPhotosLoading(false);
       })();
