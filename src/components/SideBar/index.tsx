@@ -1,6 +1,7 @@
 import { Flex, FlexProps, useMediaQuery } from "@chakra-ui/react";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
 import * as React from "react";
+import { Copyright } from "..";
 
 import { useAppContext } from "../../context/AppProvider";
 
@@ -114,18 +115,21 @@ const SideBar: React.FC<SideBarProps> = ({
             </AnimatePresence>
           </Flex>
         </Flex>
-        {navItems.map((props) => (
-          <SideBarItem
-            color={color}
-            key={props.title}
-            hoverColor={hoverColor}
-            accentColor={accentColor}
-            tooltipColor={tooltipColor}
-            tooltipBg={tooltipBg}
-            closeOnNavigate={closeOnNavigate}
-            {...props}
-          />
-        ))}
+        <Flex direction="column" flex={1} width="100%" overflowY="auto">
+          {navItems.map((props) => (
+            <SideBarItem
+              color={color}
+              key={props.title}
+              hoverColor={hoverColor}
+              accentColor={accentColor}
+              tooltipColor={tooltipColor}
+              tooltipBg={tooltipBg}
+              closeOnNavigate={closeOnNavigate}
+              {...props}
+            />
+          ))}
+        </Flex>
+        <Copyright />
       </MenuCont>
       <RenderWrapper
         className="render-wrapper"

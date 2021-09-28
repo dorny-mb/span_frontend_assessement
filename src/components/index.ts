@@ -8,3 +8,5 @@ export { default as RevealFlex } from "./RevealFlex";
 export { default as SideBar } from "./SideBar";
 export { default as FilterSection } from "./FilterSection";
 export { default as SlideArrow } from "./SlideArrow";
+export { default as Copyright } from "./Copyright";
+export { default as Version } from "./Version";

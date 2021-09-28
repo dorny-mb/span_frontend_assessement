@@ -32,7 +32,7 @@ const SlideArrow: React.FC<SlideArrowProps> = ({ Icon, left, ...rest }) => {
       }, ${theme} 50%, transparent )`}
       {...rest}
     >
-      <Icon size={24} />
+      <Icon size={30} />
     </CustomContainer>
   );
 };
