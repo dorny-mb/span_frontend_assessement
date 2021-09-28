@@ -122,7 +122,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({
                   </Center>
                   <Center>
                     <VscHeart />
-                    <Text mx={1} fontSize="sm">
+                    <Text mx={1} fontSize="xs">
                       {item.likes}
                     </Text>
                   </Center>
