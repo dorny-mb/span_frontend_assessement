@@ -15,6 +15,7 @@ import { Photo } from "../../types";
 import Card from "../Card";
 import { SlideArrow } from "..";
 import { VscChevronLeft, VscChevronRight, VscHeart } from "react-icons/vsc";
+import { theme } from "../../theme";
 
 type GalleryGridProps = {
   data: Photo[];
@@ -35,7 +36,7 @@ const CustomGrid = styled(Grid)`
     display: none; /* Safari and Chrome */
   }
 `;
-const width = 302;
+const width = 312;
 const GalleryGrid: React.FC<GalleryGridProps> = ({
   data,
   isLoaded,
@@ -84,12 +85,19 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({
               p={2}
               m={!isLoaded ? 2 : 0}
               key={index}
-              minW="300px"
+              minW="310px"
               isLoaded={isLoaded}
             >
               <Card
                 shouldAnimate
                 h="100%"
+                style={{
+                  transition: "box-shadow .2s ease-in-out 0s",
+                }}
+                _hover={{
+                  boxShadow: theme.boxShadow,
+                  cursor: "pointer",
+                }}
                 bg={cardTheme}
                 justify="space-between"
               >

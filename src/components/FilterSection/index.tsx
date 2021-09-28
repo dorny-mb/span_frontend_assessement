@@ -43,7 +43,6 @@ const FilterSection: React.FC<FilterSectionProps> = ({
       height="fit-content"
       minW={isTabletOrMobile ? "100%" : 200}
     >
-      {/* TODO:: Make this dynamic */}
       <Skeleton w="100%" isLoaded={isLoaded}>
         <Heading as="h4" px={2} mb={4} size="lg">
           Topics

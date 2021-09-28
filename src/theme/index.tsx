@@ -49,7 +49,7 @@ const theme = extendTheme({
     },
   },
   transparency: "#ffffffed",
-  boxShadow: "0px 0px 4px 4px rgba(0,0,0,0.4)",
+  boxShadow: "0px 0px 4px 4px rgba(0,0,0,0.05)",
   gridGutter: 1, // rem - taken from Chakra UI space scale https://chakra-ui.com/theme#spacing
 });
 

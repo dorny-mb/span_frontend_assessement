@@ -3,7 +3,6 @@ import {
   Flex,
   Heading,
   IconButton,
-  Skeleton,
   useColorMode,
   useColorModeValue,
   useMediaQuery,
@@ -98,19 +97,14 @@ const Header: React.FC<HeaderProps> = ({ ...rest }) => {
               as="h1"
               mx={!drawerOpen ? 4 : 0}
               fontWeight="medium"
-              fontSize="sm"
+              fontSize="xs"
             >
               SPAN Digital Innovation
             </Heading>
           )}
         </Center>
         <Center>
-          {!isTabletOrMobile && (
-            // TODO:: Make this dynamic
-            <Skeleton isLoaded={true}>
-              <Clock />
-            </Skeleton>
-          )}
+          {!isTabletOrMobile && <Clock />}
           <IconButton
             onClick={toggleColorMode}
             size="xs"
